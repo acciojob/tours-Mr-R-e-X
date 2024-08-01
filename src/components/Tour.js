@@ -26,7 +26,7 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
           >
             {readMore ? info : `${info.substring(0, 200)}`}{" "}
             <Button
-              id={"see-more" + id}
+              id={"see-more-" + id}
               size="small"
               color="primary"
               onClick={() => {
