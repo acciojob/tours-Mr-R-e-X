@@ -19,10 +19,10 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
           <Typography gutterBottom variant="h5" component="div">
             {name}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" id={"tour-item-para-" + id}>
             {readMore ? info : `${info.substring(0, 200)}...`}{" "}
             <Button
-              id={"tour-item-para-" + id}
+              id={"see-more" + id}
               size="small"
               color="primary"
               onClick={() => {
