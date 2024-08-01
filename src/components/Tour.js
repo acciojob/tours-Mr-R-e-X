@@ -34,7 +34,8 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
               }}
             >
               {" "}
-              {readMore ? "See more" : "See less"}
+              {/* {readMore ? "See more" : "See less"} */}
+              See more
             </Button>
           </Typography>
         </CardContent>
