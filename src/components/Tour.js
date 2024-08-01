@@ -20,24 +20,24 @@ const Tour = ({ id, name, info, image, price, removeTour }) => {
             {name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {readMore ? info : info.subString(0, 200)}
+            {readMore ? info : `${info.substring(0, 200)}...`}{" "}
+            <Button
+              id={"tour-item-para-" + id}
+              size="small"
+              color="primary"
+              onClick={() => {
+                openDetails();
+              }}
+            >
+              {" "}
+              {readMore ? "Show Less" : "Read More"}
+            </Button>
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button
-          id={"tour-item-para-" + { id }}
-          size="small"
-          color="primary"
-          onClick={() => {
-            openDetails();
-          }}
-        >
-          {" "}
-          {readMore ? "Show Less" : "Read More"}
-        </Button>
-        <Button
-          id={"delete-btn-" + { id }}
+          id={"delete-btn-" + id}
           size="small"
           color="secondary"
           onClick={() => removeTour(id)}
